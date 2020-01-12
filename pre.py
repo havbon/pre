@@ -93,9 +93,6 @@ class cmd:
       if self.arg.isdigit():
         return int(self.arg)
 
-      if not self.arg.isdigit():
-        
-
     if self.id == "get":
       if self.arg == "silent":
         _ = binary(ord(readchar.readchar()))

@@ -93,9 +93,22 @@ class cmd:
       if self.arg.isdigit():
         return int(self.arg)
 
+      elif not self.arg.isdigit():
+        if "+" in self.arg:
+          _ = self.arg.count("+")
+          return int(root.count) + _
+
+        if "-" in self.arg:
+          _ = self.arg.count("-")
+          return int(root.count) - _
+
     if self.id == "get":
-      if self.arg == "silent":
+      if self.arg == "input":
         _ = binary(ord(readchar.readchar()))
+        root.memory[root.cursor] = _
+
+      if self.arg == "pos":
+        _ = binary(int(root.cursor))
         root.memory[root.cursor] = _
 
     if self.id == "move":

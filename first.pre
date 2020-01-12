@@ -1,0 +1,4 @@
+goto 0
+set 0
+get pos
+write dec
